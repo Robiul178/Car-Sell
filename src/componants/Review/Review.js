@@ -8,7 +8,7 @@ const Review = () => {
     const handleAddReview = event => {
         event.preventDefault();
 
-        fetch('https://assignment11-server-robiul178.vercel.app/review', {
+        fetch('http://localhost:5000/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

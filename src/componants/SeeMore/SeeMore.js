@@ -12,7 +12,7 @@ const SeeMore = () => {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch('https://assignment11-server-robiul178.vercel.app/reviews')
+        fetch('http://localhost:5000/reviews')
             .then(res => res.json())
             .then(data => {
                 setReviews(data)

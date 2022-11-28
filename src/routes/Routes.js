@@ -12,9 +12,6 @@ import PrivetRoute from './PrivetRoute';
 import Review from '../componants/Review/Review';
 import MyReview from '../componants/MyReview/MyReview';
 import AddService from '../componants/Service/AddService/AddService';
-import MicroBus from '../componants/Category/MicroBus';
-import ElectricCar from '../componants/Category/ElectricCar';
-import LuxuryCar from '../componants/Category/LuxuryCar';
 
 const Routes = () => {
     const router = createBrowserRouter([
@@ -35,26 +32,14 @@ const Routes = () => {
                     element: <Blog></Blog>
                 },
                 {
-                    path: '/microbus',
-                    element: <MicroBus></MicroBus>
-                },
-                {
-                    path: '/electriccar',
-                    element: <ElectricCar></ElectricCar>
-                },
-                {
-                    path: '/luxurycar',
-                    element: <LuxuryCar></LuxuryCar>
-                },
-                {
                     path: '/services/:id',
                     element: <Service></Service>,
-                    loader: ({ params }) => fetch(`https://assignment11-server-robiul178.vercel.app/services/${params.id}`)
+                    loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
                 },
                 {
                     path: '/seemore/:id',
                     element: <SeeMore></SeeMore>,
-                    loader: ({ params }) => fetch(`https://assignment11-server-robiul178.vercel.app/services/${params.id}`)
+                    loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
                 },
                 {
                     path: '/register',

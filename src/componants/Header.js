@@ -37,7 +37,7 @@ const Header = () => {
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal p-0">
                             <li><a><Link className="btn btn-ghost normal-case text-xl" to="/">HOME</Link></a></li>
-                            <li><a><Link className="btn btn-ghost normal-case text-xl" to="/services/:id">SERVICE</Link></a></li>
+                            <li><a><Link className="btn btn-ghost normal-case text-xl" to="/services/:id">CARS</Link></a></li>
                             <li><a><Link className="btn btn-ghost normal-case text-xl" to="/blog">BLOG</Link></a></li>
                         </ul>
                     </div>

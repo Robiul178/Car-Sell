@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "title": "ElectricCar One",
+        "location": "Mirpur-2,Dhaka,Bangladesh",
+        " resalePrice": 600000,
+        " originalPrice": 800000,
+        "image": "https://media.hatla2eestatic.com/uploads/ncarteraz/24609/big-up_47ab549bc9a08a9491449055d84fb37c.png",
+    },
+    {
+        "id": 2,
+        "title": "ElectricCar Two",
+        "location": "Mirpur-2,Dhaka,Bangladesh",
+        " resalePrice": 900000,
+        " originalPrice": 1200000,
+        "image": "https://media.hatla2eestatic.com/uploads/ncarteraz/24609/big-up_47ab549bc9a08a9491449055d84fb37c.png",
+    }
+]
