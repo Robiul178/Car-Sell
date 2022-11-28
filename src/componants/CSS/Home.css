@@ -1,0 +1,13 @@
+.home-main-container {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+
+}
+
+@media screen and (max-width:768px) {
+    .main-container {
+        background-color: red;
+        display: grid;
+        grid-template-columns: 2fr;
+    }
+}
