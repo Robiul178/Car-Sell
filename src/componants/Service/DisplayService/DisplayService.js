@@ -14,7 +14,6 @@ const DisplayService = ({ service, setCars }) => {
                     <div className="card-body">
                         <h2 className="card-title">{title}</h2>
                         <div className="card-actions justify-end">
-                            <button className='btn btn-outline'>Book Now</button>
                             <label
                                 htmlFor="modal" className="btn"
                                 onClick={() => setCars(service)}

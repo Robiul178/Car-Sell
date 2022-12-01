@@ -27,9 +27,9 @@ const Service = () => {
 
     return (
         <div>
-            <button onClick={() => filterResult('Bmw')} className='p-24 btn'>BMW</button>
-            <button onClick={() => filterResult('Audi')} className='p-24 btn'>AUDI</button>
-            <button onClick={() => filterResult('Toyota')} className='p-24 btn'>TOYOTA</button>
+            <button onClick={() => filterResult('Bmw')} className='p-6 m-2 btn'>BMW</button>
+            <button onClick={() => filterResult('Audi')} className='p-6 m-2 btn'>AUDI</button>
+            <button onClick={() => filterResult('Toyota')} className='p-6 m-2 btn'>TOYOTA</button>
             <div className='grid grid-cols-3 gap-4'>
                 {
                     services.map(service => <DisplayService
@@ -41,9 +41,9 @@ const Service = () => {
             </div>
             {
                 cars &&
-                <Modal>
+                <Modal
                     cars={cars}
-                </Modal>
+                ></Modal>
             }
         </div>
     );

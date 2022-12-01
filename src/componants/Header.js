@@ -3,29 +3,23 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from './Context/UseContext';
 import './CSS/Heade.css'
 import { FiLogOut } from 'react-icons/fi';
-import { useState } from 'react';
+// import { useState } from 'react';
 
 
 const Header = () => {
 
     const { user, logOut } = useContext(AuthContext);
 
-    const [cars, setCars] = useState([]);
+    // const [cars, setCars] = useState([]);
 
-    const filterResult = (catItem) => {
-        alert('ok')
-    }
+    // useEffect(() => {
+    //     fetch('http://localhost:5000/services')
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             setCars(data)
 
-
-
-    useEffect(() => {
-        fetch('http://localhost:5000/services')
-            .then(res => res.json())
-            .then(data => {
-                setCars(data)
-
-            });
-    }, []);
+    //         });
+    // }, []);
 
     return (
         <div>
@@ -63,10 +57,9 @@ const Header = () => {
                             <li tabIndex={0}>
                                 <a>
                                     <Link className="btn btn-ghost normal-case text-xl" to="/services/:id">SERVICE</Link>
-                                    <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
                                 </a>
                                 <ul className="p-2">
-                                    <li><button className='btn btn-warning w-full' onClick={() => filterResult('Audi')}>AUDI</button></li>
+                                    {/* <li><button className='btn btn-warning w-full' onClick={() => filterResult('Audi')}>AUDI</button></li> */}
                                 </ul>
                             </li>
                             <li><a><Link className="btn btn-ghost normal-case text-xl" to="/blog">BLOG</Link></a></li>

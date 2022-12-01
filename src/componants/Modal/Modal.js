@@ -2,10 +2,9 @@ import React from 'react';
 import { useContext } from 'react';
 import { AuthContext } from '../Context/UseContext';
 
-const Modal = (cars) => {
+const Modal = ({ cars }) => {
     const { user } = useContext(AuthContext);
-    // const { title } = cars;
-    console.log('form modal', cars)
+    const { title } = cars;
 
     return (
         <div className='bg-red'>
@@ -13,7 +12,7 @@ const Modal = (cars) => {
             <div className="modal">
                 <div className="modal-box relative">
                     <label htmlFor="modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                    {/* <h2>{title}</h2> */}
+                    <h2>{title}</h2>
                     <form className='grid grid-cols-1 gap-3'>
                         <input type="text" disabled className="input input-bordered w-full" />
                         <input name="name" type="text" defaultValue={user?.displayName} placeholder="Your Name" className="input input-bordered w-full" />
