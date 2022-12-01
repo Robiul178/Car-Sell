@@ -43,6 +43,7 @@ const Service = () => {
                 cars &&
                 <Modal
                     cars={cars}
+                    setCars={setCars}
                 ></Modal>
             }
         </div>
