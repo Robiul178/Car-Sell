@@ -7,6 +7,7 @@ import './Service.css'
 
 const Service = () => {
     const [services, setServices] = useState([]);
+    const [cars, setCars] = useState(null);
 
     useEffect(() => {
         fetch('http://localhost:5000/services')
@@ -34,10 +35,16 @@ const Service = () => {
                     services.map(service => <DisplayService
                         service={service}
                         key={service.id}
+                        setCars={setCars}
                     ></DisplayService>)
                 }
             </div>
-            <Modal></Modal>
+            {
+                cars &&
+                <Modal>
+                    cars={cars}
+                </Modal>
+            }
         </div>
     );
 };

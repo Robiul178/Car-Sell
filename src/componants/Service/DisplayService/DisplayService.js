@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import './DisplayService.css'
 
-const DisplayService = (props) => {
+const DisplayService = ({ service, setCars }) => {
 
-    const { image, title, id } = props.service;
+    const { image, title } = service;
 
     return (
         <div className='main-container mt-24'>
@@ -13,10 +13,12 @@ const DisplayService = (props) => {
                     <figure><img src={image} alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">{title}</h2>
-
                         <div className="card-actions justify-end">
                             <button className='btn btn-outline'>Book Now</button>
-                            <label htmlFor="modal" className="btn">open modal</label>
+                            <label
+                                htmlFor="modal" className="btn"
+                                onClick={() => setCars(service)}
+                            >Book Now</label>
                         </div>
                     </div>
                 </div>
