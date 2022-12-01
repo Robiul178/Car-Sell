@@ -15,7 +15,8 @@ const DisplayService = (props) => {
                         <h2 className="card-title">{title}</h2>
 
                         <div className="card-actions justify-end">
-                            <div><Link to={`/seemore/${id}`}><button className='btn'>See More</button></Link> </div>
+                            <button className='btn btn-outline'>Book Now</button>
+                            <label htmlFor="modal" className="btn">open modal</label>
                         </div>
                     </div>
                 </div>
