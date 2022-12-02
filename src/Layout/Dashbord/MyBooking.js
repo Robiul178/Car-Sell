@@ -11,7 +11,7 @@ const MyBooking = () => {
     const [bookings, setBookings] = useState({});
     console.log(bookings)
     useEffect(() => {
-        fetch(`http://localhost:5000/bookings?email=${user?.email}`)
+        fetch(`https://assignment12-server-robiul178.vercel.app/bookings?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setBookings(data))
     }, [])
@@ -28,16 +28,15 @@ const MyBooking = () => {
                                 <th></th>
                                 <th>Name</th>
                                 <th>Model</th>
-                                <th>Price</th>
                                 <th>Location</th>
                             </tr>
                         </thead>
                         <tbody>
-                            {/* {
+                            {
                                 bookings.map(booking => <BookingTable
                                     booking={booking}
                                 ></BookingTable>)
-                            } */}
+                            }
                         </tbody>
                     </table>
                 </div>

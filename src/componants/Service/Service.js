@@ -10,7 +10,7 @@ const Service = () => {
     const [cars, setCars] = useState(null);
 
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('/services')
             .then(res => res.json())
             .then(data => {
                 setServices(data)

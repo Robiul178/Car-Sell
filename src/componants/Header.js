@@ -13,7 +13,7 @@ const Header = () => {
     // const [cars, setCars] = useState([]);
 
     // useEffect(() => {
-    //     fetch('http://localhost:5000/services')
+    //     fetch('https://assignment12-server-robiul178.vercel.app/services')
     //         .then(res => res.json())
     //         .then(data => {
     //             setCars(data)
@@ -62,8 +62,6 @@ const Header = () => {
                             {
                                 user?.uid ?
                                     <div>
-                                        <button className='btn'><Link to='/myreview'>My Review</Link> </button>
-                                        <button className='btn'><Link to='/addservice'>Add service</Link> </button>
                                         <button><Link className="btn btn-ghost normal-case text-xl" to="/dashbord">Dashbord</Link></button>
                                         <button onClick={logOut} className="btn ml-2 btn-outline"><FiLogOut /></button>
                                     </div>

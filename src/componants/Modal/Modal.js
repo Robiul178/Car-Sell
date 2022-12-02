@@ -24,7 +24,7 @@ const Modal = ({ cars, setCars }) => {
         console.log(booking)
 
 
-        fetch('http://localhost:5000/bookings', {
+        fetch('https://assignment12-server-robiul178.vercel.app/bookings', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

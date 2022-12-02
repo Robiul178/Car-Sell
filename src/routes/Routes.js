@@ -6,12 +6,8 @@ import Main from '../Layout/Main';
 import Blog from '../componants/Blog';
 import NotFound404 from '../componants/NotFound404/NotFound404';
 import Service from '../componants/Service/Service';
-import SeeMore from '../componants/SeeMore/SeeMore';
 import Home from '../Layout/Home/Home';
 import PrivetRoute from './PrivetRoute';
-import Review from '../componants/Review/Review';
-import MyReview from '../componants/MyReview/MyReview';
-import AddService from '../componants/Service/AddService/AddService';
 import DashbordLayout from '../Layout/DashbordLayout/DashbordLayout';
 // import Dashbord from '../Layout/Dashbord/Dashbord';
 import MyBooking from '../Layout/Dashbord/MyBooking';
@@ -34,16 +30,7 @@ const Routes = () => {
                     path: '/blog',
                     element: <Blog></Blog>
                 },
-                {
-                    path: '/services/:id',
-                    element: <Service></Service>,
-                    loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
-                },
-                {
-                    path: '/seemore/:id',
-                    element: <SeeMore></SeeMore>,
-                    loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
-                },
+
                 {
                     path: '/register',
                     element: <Register></Register>
@@ -51,19 +38,8 @@ const Routes = () => {
                 {
                     path: '*',
                     element: <NotFound404></NotFound404>
-                },
-                {
-                    path: '/addservice',
-                    element: <AddService></AddService>
-                },
-                {
-                    path: '/myreview',
-                    element: <PrivetRoute><MyReview></MyReview></PrivetRoute>
-                },
-                {
-                    path: '/review',
-                    element: <PrivetRoute> <Review></Review> </PrivetRoute>,
                 }
+
 
             ]
         },
