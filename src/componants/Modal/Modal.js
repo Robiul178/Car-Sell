@@ -21,6 +21,7 @@ const Modal = ({ cars, setCars }) => {
             phone,
             location
         }
+        console.log(booking)
 
 
         fetch('http://localhost:5000/bookings', {
@@ -35,7 +36,7 @@ const Modal = ({ cars, setCars }) => {
                 console.log(data)
                 if (data.acknowledged) {
                     setCars(null);
-                    toast.success('Booking confirme')
+                    alert('Booking confirme')
                 }
             })
     }

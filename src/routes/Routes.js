@@ -12,6 +12,9 @@ import PrivetRoute from './PrivetRoute';
 import Review from '../componants/Review/Review';
 import MyReview from '../componants/MyReview/MyReview';
 import AddService from '../componants/Service/AddService/AddService';
+import DashbordLayout from '../Layout/DashbordLayout/DashbordLayout';
+// import Dashbord from '../Layout/Dashbord/Dashbord';
+import MyBooking from '../Layout/Dashbord/MyBooking';
 
 const Routes = () => {
     const router = createBrowserRouter([
@@ -63,9 +66,21 @@ const Routes = () => {
                 }
 
             ]
+        },
+        {
+            path: "/dashbord",
+            element: <PrivetRoute><DashbordLayout></DashbordLayout> </PrivetRoute>,
+            children: [
+                {
+                    path: '/dashbord',
+                    element: <MyBooking></MyBooking>
+                }
+            ]
         }
 
     ]);
+
+
     return (
         <div>
             <RouterProvider router={router}></RouterProvider>
