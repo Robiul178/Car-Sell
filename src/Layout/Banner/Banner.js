@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import img1 from './toyota-avanza-img1.jpg';
 
 
@@ -12,7 +13,7 @@ const Banner = () => {
                     <div>
                         <h1 className="text-5xl font-bold">Box Office News!</h1>
                         <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                        <button className="btn btn-primary">Get Started</button>
+                        <button className="btn btn-primary"> <Link to='/service'>Get Started</Link> </button>
                     </div>
                 </div>
             </div>

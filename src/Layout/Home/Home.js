@@ -33,10 +33,6 @@ const Home = () => {
             <div>
                 <Banner></Banner>
             </div>
-
-            <div>
-                <About></About>
-            </div>
         </div>
     );
 };

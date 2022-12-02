@@ -7,10 +7,10 @@ import './Service.css'
 
 const Service = () => {
     const [services, setServices] = useState([]);
-    const [cars, setCars] = useState(null);
+    const [cars, setCars] = useState(services);
 
     useEffect(() => {
-        fetch('/services')
+        fetch('https://assignment12-server-robiul178.vercel.app/services')
             .then(res => res.json())
             .then(data => {
                 setServices(data)
@@ -27,6 +27,7 @@ const Service = () => {
 
     return (
         <div>
+            <h1 className='text-2xl font-bold'>Category</h1>
             <button onClick={() => filterResult('Bmw')} className='p-6 m-2 btn'>BMW</button>
             <button onClick={() => filterResult('Audi')} className='p-6 m-2 btn'>AUDI</button>
             <button onClick={() => filterResult('Toyota')} className='p-6 m-2 btn'>TOYOTA</button>

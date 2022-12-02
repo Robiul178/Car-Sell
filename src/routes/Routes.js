@@ -30,6 +30,11 @@ const Routes = () => {
                     path: '/blog',
                     element: <Blog></Blog>
                 },
+                {
+                    path: '/services/:id',
+                    element: <Service></Service>,
+                    loader: ({ params }) => fetch(`https://assignment12-server-robiul178.vercel.app/services/${params.id}`)
+                },
 
                 {
                     path: '/register',
@@ -38,7 +43,8 @@ const Routes = () => {
                 {
                     path: '*',
                     element: <NotFound404></NotFound404>
-                }
+                },
+
 
 
             ]
